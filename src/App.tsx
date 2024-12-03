@@ -1,15 +1,11 @@
 import React from "react";
-import { ThemeProvider, CssBaseline } from "@mui/material";
-import theme from "./theme";
+import AppRoutes from "./routes"; // Adjust based on your file structure
 
 const App: React.FC = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <div style={{ padding: "16px" }}>
-        <h1>Welcome to AirSeaEximUI</h1>
-      </div>
-    </ThemeProvider>
+    <div style={{ display: "flex", flexDirection: "column", height: "100%" }}>
+      <AppRoutes />
+    </div>
   );
 };
 
