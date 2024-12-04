@@ -1,11 +1,22 @@
 import React from "react";
-import AppRoutes from "./routes"; // Adjust based on your file structure
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import DrawerAppBar from "./components/Header"; // Adjust path as needed
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Products from "./pages/Products";
 
-const App: React.FC = () => {
+const App = () => {
   return (
-    <div style={{ display: "flex", flexDirection: "column", height: "100%" }}>
-      <AppRoutes />
-    </div>
+    <Router>
+      <DrawerAppBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/products" element={<Products />} />
+      </Routes>
+    </Router>
   );
 };
 

@@ -1,17 +1,2 @@
-import React from "react";
-import { Container, Typography } from "@mui/material";
-
-const About: React.FC = () => {
-  return (
-    <Container>
-      <Typography variant="h4" gutterBottom>
-        About Us
-      </Typography>
-      <Typography variant="body1">
-        Learn more about this application.
-      </Typography>
-    </Container>
-  );
-};
-
+const About = () => <div>About Page Content</div>;
 export default About;
