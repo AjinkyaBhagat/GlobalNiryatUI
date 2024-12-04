@@ -1,15 +1,22 @@
 import React from "react";
-import { ThemeProvider, CssBaseline } from "@mui/material";
-import theme from "./theme";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import DrawerAppBar from "./components/Header"; // Adjust path as needed
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Products from "./pages/Products";
 
-const App: React.FC = () => {
+const App = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <div style={{ padding: "16px" }}>
-        <h1>Welcome to AirSeaEximUI</h1>
-      </div>
-    </ThemeProvider>
+    <Router>
+      <DrawerAppBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/products" element={<Products />} />
+      </Routes>
+    </Router>
   );
 };
 
