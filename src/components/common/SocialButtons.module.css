@@ -1,0 +1,59 @@
+.container {
+  position: fixed;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+
+.toggle-button {
+  transition: transform 0.3s ease-in-out;
+}
+
+.toggle-button.open {
+  background-color: #d32f2f;
+}
+
+.toggle-button.open:hover {
+  background-color: #b71c1c;
+}
+
+/* Social Buttons Container Animation */
+.showButtons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  animation: slideIn 0.3s ease-in-out forwards;
+}
+
+.hideButtons {
+  display: none;
+}
+
+/* Social Button Animation */
+.social-button {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: scale(0.7);
+}
+
+.showButtons .social-button {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Animation for the button container from top to bottom */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px); /* Start above the screen */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* Final position */
+  }
+}

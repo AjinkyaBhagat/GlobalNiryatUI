@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Box, Grid } from "@mui/material";
+import { Box, Stack } from "@mui/material";
 import FullWidthCard from "../components/common/FullWidthCard";
 import ProductCard from "../components/product/ProductCard";
 import { fetchProduct } from "../services/productService";
 
-const ProductsPage: React.FC = () => {
+const Products: React.FC = () => {
   const [product, setProduct] = useState<any>(null);
 
   useEffect(() => {
@@ -20,12 +20,26 @@ const ProductsPage: React.FC = () => {
       {/* Full-Width Card */}
       <FullWidthCard />
 
-      {/* Responsive Cards Section */}
-      <Grid container spacing={3} sx={{ marginTop: "32px" }}>
+      {/* Responsive Cards Section using Stack */}
+      <Stack
+        direction={{ xs: "column", sm: "row" }} // Stack direction based on screen size
+        spacing={3} // Spacing between the cards
+        sx={{
+          marginTop: "32px",
+          flexWrap: "wrap",
+          justifyContent: "space-between", // Ensures space between cards
+        }}
+      >
         {/* First Card (Fetched from API) */}
-        <Grid item xs={12} sm={6}>
+        <Box
+          sx={{
+            flex: "1 1 calc(50% - 16px)", // 50% width with margin
+            maxWidth: "350px", // Max width of card
+            marginBottom: "16px", // Margin at the bottom of the card
+          }}
+        >
           <ProductCard
-            image={product?.image || "/assets/product1.jpg"}
+            image={product?.image || "../assets/product1.jpg"}
             name={product?.name || "Product Name"}
             description={
               product?.description || "Product description goes here."
@@ -35,33 +49,38 @@ const ProductsPage: React.FC = () => {
             }
             originCountry={product?.originCountry || "N/A"}
           />
-        </Grid>
+        </Box>
 
         {/* Dummy Cards */}
-        <Grid item xs={12} sm={6}>
+        <Box
+          sx={{
+            flex: "1 1 calc(50% - 16px)", // 50% width with margin
+            maxWidth: "350px", // Max width of card
+            marginBottom: "16px", // Margin at the bottom of the card
+          }}
+        >
           <ProductCard
             image="/assets/product2.jpg"
             name="Test Product 1"
             description="Dummy description for product 1."
           />
-        </Grid>
-        <Grid item xs={12} sm={6}>
+        </Box>
+        <Box
+          sx={{
+            flex: "1 1 calc(50% - 16px)", // 50% width with margin
+            maxWidth: "350px", // Max width of card
+            marginBottom: "16px", // Margin at the bottom of the card
+          }}
+        >
           <ProductCard
             image="/assets/product2.jpg"
             name="Test Product 2"
             description="Dummy description for product 2."
           />
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <ProductCard
-            image="/assets/product1.jpg"
-            name="Test Product 3"
-            description="Dummy description for product 3."
-          />
-        </Grid>
-      </Grid>
+        </Box>
+      </Stack>
     </Box>
   );
 };
 
-export default ProductsPage;
+export default Products;
