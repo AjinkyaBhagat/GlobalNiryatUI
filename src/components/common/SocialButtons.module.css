@@ -15,11 +15,11 @@
 }
 
 .toggle-button.open {
-  background-color: #d32f2f;
+  background-color: #707070;
 }
 
 .toggle-button.open:hover {
-  background-color: #b71c1c;
+  background-color: #585858;
 }
 
 /* Social Buttons Container Animation */

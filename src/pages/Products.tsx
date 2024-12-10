@@ -1,84 +1,44 @@
-import React, { useEffect, useState } from "react";
-import { Box, Stack } from "@mui/material";
+// import React from "react";
+import { Box } from "@mui/material";
 import FullWidthCard from "../components/common/FullWidthCard";
 import ProductCard from "../components/product/ProductCard";
-import { fetchProduct } from "../services/productService";
+
+// Import images
+import redOnionImage from "../assets/red-onion-powder.jpg";
+import whiteOnionImage from "../assets/white-onion-powder.jpg";
 
 const Products: React.FC = () => {
-  const [product, setProduct] = useState<any>(null);
-
-  useEffect(() => {
-    const loadProduct = async () => {
-      const data = await fetchProduct();
-      setProduct(data);
-    };
-    loadProduct();
-  }, []);
-
   return (
     <Box sx={{ width: "100%", padding: "16px" }}>
-      {/* Full-Width Card */}
-      <FullWidthCard />
+      {/* FullWidthCard at the top */}
+      <Box sx={{ marginBottom: "24px" }}>
+        <FullWidthCard />
+      </Box>
 
-      {/* Responsive Cards Section using Stack */}
-      <Stack
-        direction={{ xs: "column", sm: "row" }} // Stack direction based on screen size
-        spacing={3} // Spacing between the cards
-        sx={{
-          marginTop: "32px",
-          flexWrap: "wrap",
-          justifyContent: "space-between", // Ensures space between cards
-        }}
-      >
-        {/* First Card (Fetched from API) */}
-        <Box
-          sx={{
-            flex: "1 1 calc(50% - 16px)", // 50% width with margin
-            maxWidth: "350px", // Max width of card
-            marginBottom: "16px", // Margin at the bottom of the card
-          }}
-        >
-          <ProductCard
-            image={product?.image || "../assets/product1.jpg"}
-            name={product?.name || "Product Name"}
-            description={
-              product?.description || "Product description goes here."
-            }
-            price={
-              product?.price ? `${product.currency} ${product.price}` : "INR 0"
-            }
-            originCountry={product?.originCountry || "N/A"}
-          />
-        </Box>
+      {/* Card 1: Image on the left, Description on the right */}
+      <ProductCard
+        image={redOnionImage}
+        name="Red Onion Powder"
+        description="Premium red onion powder made from fresh, high-quality onions.
+                    Ground to perfection for a smooth, consistent texture.
+                    Rich in flavor, perfect for seasoning a variety of dishes.
+                    Ideal for soups, sauces, and marinades.
+                    A must-have pantry staple for onion lovers."
+        originCountry="India"
+      />
 
-        {/* Dummy Cards */}
-        <Box
-          sx={{
-            flex: "1 1 calc(50% - 16px)", // 50% width with margin
-            maxWidth: "350px", // Max width of card
-            marginBottom: "16px", // Margin at the bottom of the card
-          }}
-        >
-          <ProductCard
-            image="/assets/product2.jpg"
-            name="Test Product 1"
-            description="Dummy description for product 1."
-          />
-        </Box>
-        <Box
-          sx={{
-            flex: "1 1 calc(50% - 16px)", // 50% width with margin
-            maxWidth: "350px", // Max width of card
-            marginBottom: "16px", // Margin at the bottom of the card
-          }}
-        >
-          <ProductCard
-            image="/assets/product2.jpg"
-            name="Test Product 2"
-            description="Dummy description for product 2."
-          />
-        </Box>
-      </Stack>
+      {/* Card 2: Image on the right, Description on the left */}
+      <ProductCard
+        image={whiteOnionImage}
+        name="White Onion Powder"
+        description="Finely ground white onion powder with a mild, sweet flavor.
+                    Made from carefully selected, fresh white onions.
+                    Enhances the taste of sauces, dips, and dressings.
+                    Perfect for seasoning meats, vegetables, and soups.
+                    A versatile and essential ingredient for home kitchens."
+        originCountry="India"
+        reverse={true} // Reverses the layout
+      />
     </Box>
   );
 };

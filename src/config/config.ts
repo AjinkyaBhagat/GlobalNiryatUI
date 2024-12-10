@@ -1,4 +1,3 @@
-// src/config/config.ts
 export const socialConfig = {
   email: "ajinkyabhagat8556@gmail.com",
   phoneNumber: "7719899869",
