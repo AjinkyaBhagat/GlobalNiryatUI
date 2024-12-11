@@ -1,22 +1,14 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import DrawerAppBar from "./components/Header"; // Adjust path as needed
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Products from "./pages/Products";
+import AppRoutes from "./routes/index"; // Import routes from index.tsx
+import SocialButtons from "./components/common/SocialButtons";
 
-const App = () => {
+const App: React.FC = () => {
   return (
-    <Router>
-      <DrawerAppBar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/products" element={<Products />} />
-      </Routes>
-    </Router>
+    <div>
+      {/* Global SocialButtons */}
+      <SocialButtons />
+      <AppRoutes /> {/* Routes will now be defined in AppRoutes */}
+    </div>
   );
 };
 
