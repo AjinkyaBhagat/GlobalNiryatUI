@@ -57,7 +57,20 @@ const ProductCard: React.FC<ProductCardProps> = ({
             padding: "16px",
           }}
         >
-          <Typography variant="h4" fontWeight="bold">
+          {/* <Typography variant="h4" fontWeight="bold">
+            {name}
+          </Typography> */}
+          <Typography
+            variant="h4"
+            align="left"
+            gutterBottom
+            sx={{
+              fontWeight: 700,
+              background: "linear-gradient(45deg, #2196F3 30%, #21CBF3 90%)",
+              WebkitBackgroundClip: "text",
+              WebkitTextFillColor: "transparent",
+            }}
+          >
             {name}
           </Typography>
           <Typography
