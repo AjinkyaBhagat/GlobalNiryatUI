@@ -2,6 +2,7 @@
 import { Box } from "@mui/material";
 import FullWidthCard from "../components/common/FullWidthCard";
 import ProductCard from "../components/product/ProductCard";
+import productsVideo from "../assets/onion-video.mp4";
 
 // Import images
 import redOnionImage from "../assets/red-onion-powder.jpg";
@@ -12,7 +13,11 @@ const Products: React.FC = () => {
     <Box sx={{ width: "100%", padding: "16px" }}>
       {/* FullWidthCard at the top */}
       <Box sx={{ marginBottom: "24px" }}>
-        <FullWidthCard />
+        <FullWidthCard
+          videoSrc={productsVideo}
+          showText={true}
+          pageType="products"
+        />
       </Box>
 
       {/* Card 1: Image on the left, Description on the right */}
