@@ -10,7 +10,7 @@ import whiteOnionImage from "../assets/white-onion-powder.jpg";
 
 const Products: React.FC = () => {
   return (
-    <Box sx={{ width: "100%", padding: "16px" }}>
+    <Box sx={{ width: "100%" }}>
       {/* FullWidthCard at the top */}
       <Box sx={{ marginBottom: "24px" }}>
         <FullWidthCard

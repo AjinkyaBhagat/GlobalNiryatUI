@@ -19,8 +19,9 @@ const FullWidthCard: React.FC<FullWidthCardProps> = ({
       sx={{
         position: "relative",
         width: "100%",
-        height: "600px", // Fixed height for the card
+        height: "600px",
         overflow: "hidden",
+        mt: "20px",
       }}
     >
       {/* Background Video */}

@@ -46,7 +46,7 @@ export const skills = [
     icon: <FaHeadset />,
     title: "Customer Support & Service",
     description:
-      "Providing exceptional customer service, with 24/7 support and assistance to ensure satisfaction and long-term partnerships.",
+      "Providing exceptional customer service and assistance to ensure satisfaction and long-term partnerships.",
     color: "#FF9900",
   },
   {
