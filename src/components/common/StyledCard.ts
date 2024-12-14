@@ -1,5 +1,5 @@
 import { styled } from "@mui/system";
-import { useSpring, animated, config } from "@react-spring/web";
+import { animated } from "@react-spring/web";
 import { Card } from "@mui/material";
 
 export const AnimatedCard = styled(animated(Card))({

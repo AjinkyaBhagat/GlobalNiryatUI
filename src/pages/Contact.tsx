@@ -1,23 +1,8 @@
-import React, { useState } from "react";
-import {
-  Box,
-  Container,
-  Typography,
-  useMediaQuery,
-  useTheme,
-} from "@mui/material";
+import React from "react";
+import { Box, Container, Typography } from "@mui/material";
 import ContactCards from "../components/contact/ContactCards";
-import ContactForm from "../components/contact/ContactForm";
-import { useForm } from "../hooks/useForm";
 
 const Contact: React.FC = () => {
-  const { formData, handleInputChange } = useForm();
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-  };
-
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Container maxWidth="lg" sx={{ mt: 8, mb: 8 }}>
@@ -38,7 +23,6 @@ const Contact: React.FC = () => {
           variant="h6"
           align="center"
           color="textSecondary"
-          paragraph
           sx={{ mb: 6 }}
         >
           Our dedicated team is ready to assist you with any questions or
@@ -46,11 +30,6 @@ const Contact: React.FC = () => {
         </Typography>
 
         <ContactCards />
-        <ContactForm
-          formData={formData}
-          handleInputChange={handleInputChange}
-          handleSubmit={handleSubmit}
-        />
       </Container>
     </Box>
   );

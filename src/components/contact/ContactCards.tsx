@@ -11,8 +11,7 @@ import { FaPhone, FaEnvelope } from "react-icons/fa";
 import { styled } from "@mui/system";
 import { socialConfig } from "../../config/config";
 
-// Styled Card component
-const StyledCard = styled(Card)(({ theme }) => ({
+const StyledCard = styled(Card)({
   height: "100%",
   display: "flex",
   flexDirection: "column",
@@ -20,7 +19,7 @@ const StyledCard = styled(Card)(({ theme }) => ({
   "&:hover": {
     transform: "translateY(-5px)",
   },
-}));
+});
 
 // Contact card data
 const contactCards = [

@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, Container } from "@mui/material";
+import { Typography, Container } from "@mui/material";
 import { styled, keyframes } from "@mui/system";
 
 // Define the fade-in animation
@@ -40,7 +40,7 @@ const WhyChooseSection: React.FC = () => {
     <Container maxWidth="md" sx={{ my: 8 }}>
       <StyledTypography
         variant="h1"
-        component="h1"
+        as="h1" // Replace component with as
         aria-label="Why Choose Air Sea Exim?"
       >
         Why Choose Air Sea Exim?

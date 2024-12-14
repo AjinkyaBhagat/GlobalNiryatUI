@@ -5,7 +5,7 @@ import { useSpring, animated } from "@react-spring/web";
 import { FaGlobeAmericas } from "react-icons/fa";
 import AboutusImage from "../../assets/aboutus-image.jpg"; // Correct import statement
 
-const StyledCard = styled(Card)(({ theme }) => ({
+const StyledCard = styled(Card)(() => ({
   width: "100%",
   minHeight: "400px",
   borderRadius: "16px",
@@ -13,7 +13,7 @@ const StyledCard = styled(Card)(({ theme }) => ({
   transition: "transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out",
   "&:hover": {
     transform: "translateY(-5px)",
-    //boxShadow: theme.shadows[10]
+    // boxShadow: theme.shadows[10] // Removed usage of theme, as it was not needed
   },
 }));
 

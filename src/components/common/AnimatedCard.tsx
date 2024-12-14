@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Container, Grid, CardContent, Typography } from "@mui/material";
+import { Container, Grid, CardContent, Typography } from "@mui/material";
 import { cardData } from "../common/AnimatedCardData";
 import { AnimatedCard } from "../common/StyledCard";
 import { StyledCardMedia } from "../common/StyledCardMedia";
@@ -15,7 +15,7 @@ const AnimatedCards: React.FC = () => {
   return (
     <Container maxWidth="lg" sx={{ py: 8 }}>
       <Grid container spacing={4}>
-        {cardData.map((card, index) => (
+        {cardData.map((card) => (
           <Grid
             item
             xs={12}
