@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, Button, styled, keyframes } from "@mui/material";
+import { Box, Typography, styled, keyframes } from "@mui/material";
 import ConnectingWorld from "../../assets/connecting-world.webm";
 
 // Define fade-in animation for text
