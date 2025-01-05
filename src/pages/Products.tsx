@@ -2,7 +2,7 @@
 import { Box } from "@mui/material";
 import FullWidthCard from "../components/common/FullWidthCard";
 import ProductCard from "../components/product/ProductCard";
-import productsVideo from "../assets/onion-video.mp4";
+import productsVideo from "../assets/onion-video.webm";
 
 // Import images
 import redOnionImage from "../assets/red-onion-powder.jpg";
