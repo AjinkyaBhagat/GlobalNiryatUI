@@ -3,7 +3,7 @@ import { Box, Card, Typography, Grid } from "@mui/material";
 import { styled } from "@mui/system";
 import { useSpring, animated } from "@react-spring/web";
 import { FaGlobeAmericas } from "react-icons/fa";
-import AboutusImage from "../../assets/aboutus-image.jpg"; // Correct import statement
+import AboutusImage from "../../assets/aboutus-image.webp"; // Correct import statement
 
 const StyledCard = styled(Card)(() => ({
   width: "100%",

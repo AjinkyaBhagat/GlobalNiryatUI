@@ -39,7 +39,7 @@ const FullWidthCard: React.FC<FullWidthCardProps> = ({
           objectFit: "cover", // Ensures video covers the card area
         }}
       >
-        <source src={videoSrc} type="video/mp4" />
+        <source src={videoSrc} type="video/webm" />
         Your browser does not support the video tag.
       </video>
 

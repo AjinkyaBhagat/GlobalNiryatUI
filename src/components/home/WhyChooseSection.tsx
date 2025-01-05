@@ -1,5 +1,5 @@
 import React from "react";
-import { Typography, Container } from "@mui/material";
+import { Typography } from "@mui/material";
 import { styled, keyframes } from "@mui/system";
 
 // Define the fade-in animation
@@ -37,15 +37,13 @@ const StyledTypography = styled(Typography)(({ theme }) => ({
 
 const WhyChooseSection: React.FC = () => {
   return (
-    <Container maxWidth="md" sx={{ my: 8 }}>
-      <StyledTypography
-        variant="h1"
-        as="h1" // Replace component with as
-        aria-label="Why Choose Air Sea Exim?"
-      >
-        Why Choose Air Sea Exim?
-      </StyledTypography>
-    </Container>
+    <StyledTypography
+      variant="h1"
+      as="h1" // Replace component with as
+      aria-label="Why Choose Air Sea Exim?"
+    >
+      Why Choose Air Sea Exim?
+    </StyledTypography>
   );
 };
 

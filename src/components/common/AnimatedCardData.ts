@@ -1,7 +1,7 @@
-import uncompromisedQuality from "../../assets/uncompromised-quality.jpg";
-import costEffectiveSolutions from "../../assets/cost-effective-solutions.jpg";
-import reliableShipping from "../../assets/reliable-shipping.jpg";
-import globalReach from "../../assets/global-reach.jpg";
+import uncompromisedQuality from "../../assets/uncompromised-quality.webp";
+import costEffectiveSolutions from "../../assets/cost-effective-solutions.webp";
+import reliableShipping from "../../assets/reliable-shipping.webp";
+import globalReach from "../../assets/global-reach.webp";
 
 export const cardData = [
   {
