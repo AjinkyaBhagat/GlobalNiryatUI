@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
       </Container>
       <Box sx={{ textAlign: "center", mt: 2 }}>
         <Typography variant="body2" color="white">
-          © {new Date().getFullYear()} AIR SEA EXIM. All rights reserved.
+          © {new Date().getFullYear()} Global Niryat. All rights reserved.
         </Typography>
       </Box>
     </Box>

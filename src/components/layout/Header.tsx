@@ -38,7 +38,7 @@ export default function DrawerAppBar(props: Props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        AIR SEA EXIM
+        Global Niryat
       </Typography>
       <Divider />
       <List>
@@ -71,7 +71,7 @@ export default function DrawerAppBar(props: Props) {
             component="div"
             sx={{ display: "flex", alignItems: "center", flexGrow: 1 }}
           >
-            AIR SEA EXIM
+            Global Niryat
           </Typography>
 
           {/* Hamburger Menu (Mobile View Only) */}

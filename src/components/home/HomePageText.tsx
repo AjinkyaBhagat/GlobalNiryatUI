@@ -39,7 +39,7 @@ const HomePageText: React.FC = () => {
   return (
     <>
       <WelcomeText variant="h4">Welcome to</WelcomeText>
-      <CompanyText variant="h1">AIR SEA EXIM</CompanyText>
+      <CompanyText variant="h1">Global Niryat</CompanyText>
     </>
   );
 };
