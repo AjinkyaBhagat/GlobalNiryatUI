@@ -40,9 +40,9 @@ const WhyChooseSection: React.FC = () => {
     <StyledTypography
       variant="h1"
       as="h1" // Replace component with as
-      aria-label="Why Choose Air Sea Exim?"
+      aria-label="Why Choose Global Niryat?"
     >
-      Why Choose Air Sea Exim?
+      Why Choose Global Niryat?
     </StyledTypography>
   );
 };

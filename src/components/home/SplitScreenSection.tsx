@@ -94,13 +94,14 @@ const SplitScreenSection: React.FC = () => {
         }}
       >
         <StyledTypography variant="h3">
-          Unlocking Global Opportunities with AirSeaExim
+          Unlocking Global Opportunities with Global Niryat
         </StyledTypography>
         <Typography variant="body1" sx={{ marginBottom: "2rem" }}>
-          At AirSeaExim, we specialize in connecting India to the world through
-          efficient and reliable export-import services. Our end-to-end trade
-          and logistics solutions make cross-border business easier, faster, and
-          more profitable. Join us in shaping the future of international trade.
+          At Global Niryat, we specialize in connecting India to the world
+          through efficient and reliable export-import services. Our end-to-end
+          trade and logistics solutions make cross-border business easier,
+          faster, and more profitable. Join us in shaping the future of
+          international trade.
         </Typography>
       </Box>
     </Box>
