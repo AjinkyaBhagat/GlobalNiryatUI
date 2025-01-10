@@ -45,5 +45,3 @@ const HomePageText: React.FC = () => {
 };
 
 export default HomePageText;
-
-// Comment
