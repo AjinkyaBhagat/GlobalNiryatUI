@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
               Contact
             </Typography>
             <Typography variant="body2" color="white">
-              Email: airseaexim@gmail.com
+              Email: ajinkyabhagat8556@gmail.com
             </Typography>
             <Typography variant="body2" color="white">
               Phone: +91 7719899869
