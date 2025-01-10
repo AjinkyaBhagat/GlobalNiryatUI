@@ -37,7 +37,17 @@ export default function DrawerAppBar(props: Props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
+      <Typography
+        variant="h6"
+        component={Link}
+        to="/"
+        sx={{
+          my: 2,
+          textDecoration: "none",
+          color: "inherit",
+          cursor: "pointer",
+        }}
+      >
         Global Niryat
       </Typography>
       <Divider />
@@ -68,8 +78,16 @@ export default function DrawerAppBar(props: Props) {
           {/* Logo/Title - Always Visible */}
           <Typography
             variant="h6"
-            component="div"
-            sx={{ display: "flex", alignItems: "center", flexGrow: 1 }}
+            component={Link}
+            to="/"
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              flexGrow: 1,
+              textDecoration: "none",
+              color: "inherit",
+              cursor: "pointer",
+            }}
           >
             Global Niryat
           </Typography>
