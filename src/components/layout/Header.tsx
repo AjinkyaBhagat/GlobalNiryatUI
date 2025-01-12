@@ -12,8 +12,8 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
+import GlobalNiryatLogo from "../../assets/global-niryat-logo.png";
 
 interface Props {
   window?: () => Window;
@@ -37,8 +37,7 @@ export default function DrawerAppBar(props: Props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography
-        variant="h6"
+      <Box
         component={Link}
         to="/"
         sx={{
@@ -46,10 +45,17 @@ export default function DrawerAppBar(props: Props) {
           textDecoration: "none",
           color: "inherit",
           cursor: "pointer",
+          display: "flex",
+          justifyContent: "center",
         }}
       >
-        Global Niryat
-      </Typography>
+        <img
+          src={GlobalNiryatLogo}
+          alt="Global Niryat Logo"
+          style={{ height: "40px" }}
+        />
+      </Box>
+
       <Divider />
       <List>
         {navItems.map((item) => (
@@ -73,24 +79,34 @@ export default function DrawerAppBar(props: Props) {
   return (
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
-      <AppBar component="nav">
+      <AppBar
+        component="nav"
+        sx={{
+          backgroundColor: "rgba(255, 255, 255, 0.8)", // Semi-transparent white
+          backdropFilter: "blur(5px)", // Gaussian blur effect
+          color: "black",
+          boxShadow: "none",
+        }}
+      >
         <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-          {/* Logo/Title - Always Visible */}
-          <Typography
-            variant="h6"
+          {/* Logo */}
+          <Box
             component={Link}
             to="/"
             sx={{
               display: "flex",
               alignItems: "center",
-              flexGrow: 1,
               textDecoration: "none",
               color: "inherit",
               cursor: "pointer",
             }}
           >
-            Global Niryat
-          </Typography>
+            <img
+              src={GlobalNiryatLogo}
+              alt="Global Niryat Logo"
+              style={{ height: "50px" }}
+            />
+          </Box>
 
           {/* Hamburger Menu (Mobile View Only) */}
           <IconButton
@@ -110,7 +126,10 @@ export default function DrawerAppBar(props: Props) {
                 key={item.label}
                 component={Link}
                 to={item.path}
-                sx={{ color: "#fff" }}
+                sx={{
+                  color: "black", // Set text color to black
+                  textTransform: "none", // Prevent uppercase transformation
+                }}
               >
                 {item.label}
               </Button>
