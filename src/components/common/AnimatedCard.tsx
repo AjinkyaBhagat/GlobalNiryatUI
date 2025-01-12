@@ -13,7 +13,7 @@ const handleImageError = (
 
 const AnimatedCards: React.FC = () => {
   return (
-    <Container maxWidth="lg" sx={{ py: 8 }}>
+    <Container maxWidth="lg" sx={{ py: 2 }}>
       <Grid container spacing={4}>
         {cardData.map((card) => (
           <Grid
