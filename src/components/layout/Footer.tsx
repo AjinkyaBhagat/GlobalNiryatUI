@@ -23,10 +23,10 @@ const Footer: React.FC = () => {
               Contact
             </Typography>
             <Typography variant="body2" color="white" noWrap>
-              Email: ajinkyabhagat8556@gmail.com
+              Email: globalniryatbusiness@gmail.com
             </Typography>
             <Typography variant="body2" color="white">
-              Phone: +91 7719899869
+              Phone: +91 85300 84845
             </Typography>
           </Stack>
         </Stack>
